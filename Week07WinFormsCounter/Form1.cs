@@ -26,13 +26,15 @@ namespace Week07WinFormsCounter
         private void OnPress(object sender, EventArgs e)
         {
             // btnPress.Enabled = false;
-            label1.Text = "" + ++count;
+            // label1.Text = "" + ++count;
+            label1.Text = $"{ ++count}";
         }
 
         private void OnPress2(object sender, EventArgs e)
         {
             // btnPress.Enabled = false;
-            label1.Text = "" + --count;
+            if (count > 0)
+                label1.Text = "" + --count;
         }
 
         private void Form1_Load(object sender, EventArgs e)
